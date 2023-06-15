@@ -1,0 +1,37 @@
+---
+const title = "Astro curso";
+const hobbies = ["Programar", "Leer", "Dormir", "Comer", "Gym"];
+import Card from "../components/Card.astro";
+---
+
+<ul>
+  {
+    hobbies.map((hobby) => (
+      <li>
+        {hobby}
+        <button>Like</button>
+      </li>
+    ))
+  }
+</ul>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <h1>{title}</h1>
+    <Card
+      title="Card Props"
+      content="Servicios de desarrollo de aplicaciones y diseños de interfaces webs "
+    />
+    <Card
+      title="Card  awesome"
+      content="Servicios de desarrollo de aplicaciones y diseños de interfaces webs , increibles con typescript , astro , javascript "
+    />
+  </body>
+</html>
